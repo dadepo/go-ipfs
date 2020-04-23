@@ -53,4 +53,28 @@ else
 
 fi
 
+# if node is bootnode then output the peerId
+echo $(ls -lh /usr/local/nexus)
+echo $(ls -lh /usr/local/nexus/peerid)
+echo $(whoami)
+#cat /dev/null > /usr/local/nexus/peerid
+
+if [ ! -z "$IS_BOOTNODE" ] ; then
+     echo "Copying peer id of boot node..."
+     PEER_ID=$(ipfs id | grep "ID" | cut -d ':' -f 2 | sed 's/.$//' | tr -d '"' | tr -d " ")
+     echo "Peer ID ${PEER_ID} generated"
+     echo $PEER_ID > /usr/local/nexus/peerid
+     echo "Saved peer ID of bootnode as:"
+     echo $(cat /usr/local/nexus/peerid)
+else
+     PEER_ID=$(cat /usr/local/nexus/peerid)
+     echo "Reading peer id ${PEER_ID} of boot node..."
+fi
+
+
+ipfs bootstrap add /ip4/192.168.1.1/tcp/4001/ipfs/${PEER_ID}
+
+# force to start in private network
+#export LIBP2P_FORCE_PNET=1
+
 exec ipfs "$@"

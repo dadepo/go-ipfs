@@ -107,4 +107,6 @@ require (
 	gopkg.in/cheggaaa/pb.v1 v1.0.28
 )
 
+replace github.com/ipfs/go-ipfs-config@v0.0.3 => github.com/dadepo/go-ipfs-config v0.0.31
+
 go 1.13
