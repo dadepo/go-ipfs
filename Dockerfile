@@ -82,6 +82,17 @@ VOLUME $IPFS_PATH
 # The default logging level
 ENV IPFS_LOGGING ""
 
+# The swarm key. TODO move this to a place that can be accessible accros the containers
+RUN echo "09b7fe038a241d5e38650b0f1811933644d6195814f863902d44698fa38b8cfa" > $IPFS_PATH/swarm.key
+
+RUN mkdir -p /usr/local/nexus \
+    && chown ipfs:users /usr/local/nexus
+
+RUN touch /usr/local/nexus/peerid \
+   && chown ipfs:users /usr/local/nexus/peerid
+
+RUN chmod 4755 /usr/local/nexus/peerid
+
 # This just makes sure that:
 # 1. There's an fs-repo, and initializes one if there isn't.
 # 2. The API and Gateway are accessible from outside the container.
