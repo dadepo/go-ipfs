@@ -53,6 +53,9 @@ else
 
 fi
 
+# TODO fix the crazy go dependency issue. That will remove the need for this
+ipfs bootstrap rm --all
+
 # if node is bootnode then output the peerId
 echo $(ls -lh /usr/local/nexus)
 echo $(ls -lh /usr/local/nexus/peerid)
