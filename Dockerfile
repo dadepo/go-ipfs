@@ -83,7 +83,7 @@ VOLUME $IPFS_PATH
 ENV IPFS_LOGGING ""
 
 # The swarm key. TODO move this to a place that can be accessible accros the containers
-RUN echo "09b7fe038a241d5e38650b0f1811933644d6195814f863902d44698fa38b8cfa" > $IPFS_PATH/swarm.key
+RUN echo "13a6547ae78c8aca716877f12015ed9f721d08457fa791be6efa07b8b2adcc43" > $IPFS_PATH/swarm.key
 
 RUN mkdir -p /usr/local/nexus \
     && chown ipfs:users /usr/local/nexus
