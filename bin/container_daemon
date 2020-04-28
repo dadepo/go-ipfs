@@ -53,7 +53,7 @@ else
 
 fi
 
-# TODO fix the crazy go dependency issue. That will remove the need for this
+# Second guard rail to ensure a private network
 ipfs bootstrap rm --all
 
 # if node is bootnode then output the peerId

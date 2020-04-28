@@ -83,6 +83,10 @@ github.com/crackcomm/go-gitignore v0.0.0-20170627025303-887ab5e44cc3 h1:HVTnpeuv
 github.com/crackcomm/go-gitignore v0.0.0-20170627025303-887ab5e44cc3/go.mod h1:p1d6YEZWvFzEh4KLyvBcVSnrfNDDvK2zfK/4x2v/4pE=
 github.com/cskr/pubsub v1.0.2 h1:vlOzMhl6PFn60gRlTQQsIfVwaPB/B/8MziK8FhEPt/0=
 github.com/cskr/pubsub v1.0.2/go.mod h1:/8MzYXk/NJAz782G8RPkFzXTZVu63VotefPnR9TIRis=
+github.com/dadepo/go-ipfs-config v0.6.31 h1:n2KdTPLXxm5bvpsThbwYodrVG2v8xQ//gnK0ERh7FlU=
+github.com/dadepo/go-ipfs-config v0.6.31/go.mod h1:v2sPKognnR1UKF0wKhkEfZQjT3MOqPUXRlJN1gPb98M=
+github.com/dadepo/go-ipfs-config v0.6.32 h1:w6tE04g3d8Vhtk3W+9c0mOpDFDVJbQo4U+k2Ny9uwV0=
+github.com/dadepo/go-ipfs-config v0.6.32/go.mod h1:nSLCFtlaL+2rbl3F+9D4gQZQbT1LjRKx7TJg/IHz6oM=
 github.com/davecgh/go-spew v0.0.0-20171005155431-ecdeabc65495/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
