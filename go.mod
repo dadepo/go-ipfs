@@ -109,4 +109,4 @@ require (
 
 go 1.13
 
-replace github.com/ipfs/go-ipfs-config v0.5.2 => github.com/dadepo/go-ipfs-config v0.6.32
+replace github.com/ipfs/go-ipfs-config v0.5.3 => github.com/dadepo/go-ipfs-config v0.6.32
