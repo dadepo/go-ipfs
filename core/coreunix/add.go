@@ -4,10 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"io"
-	gopath "path"
-	"strconv"
-
 	"github.com/ipfs/go-cid"
 	bstore "github.com/ipfs/go-ipfs-blockstore"
 	chunker "github.com/ipfs/go-ipfs-chunker"
@@ -22,8 +18,12 @@ import (
 	"github.com/ipfs/go-unixfs/importer/balanced"
 	ihelper "github.com/ipfs/go-unixfs/importer/helpers"
 	"github.com/ipfs/go-unixfs/importer/trickle"
+	verifcid "github.com/ipfs/go-verifcid"
 	coreiface "github.com/ipfs/interface-go-ipfs-core"
 	"github.com/ipfs/interface-go-ipfs-core/path"
+	"io"
+	gopath "path"
+	"strconv"
 )
 
 var log = logging.Logger("coreunix")
@@ -125,6 +125,11 @@ func (adder *Adder) add(reader io.Reader) (ipld.Node, error) {
 	} else {
 		nd, err = balanced.Layout(db)
 	}
+	if err != nil {
+		return nil, err
+	}
+
+	err = verifcid.ContainsMalware(nd.Cid().String())
 	if err != nil {
 		return nil, err
 	}

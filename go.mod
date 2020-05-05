@@ -110,3 +110,5 @@ require (
 go 1.13
 
 replace github.com/ipfs/go-ipfs-config v0.5.3 => github.com/dadepo/go-ipfs-config v0.6.33
+
+replace github.com/ipfs/go-verifcid v0.0.1 => github.com/dadepo/go-verifcid v0.6.31

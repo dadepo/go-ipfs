@@ -108,6 +108,8 @@ RUN touch /usr/local/nexus/peerid \
 
 RUN chmod 4755 /usr/local/nexus/peerid
 
+COPY ./blacklist "/"
+
 # This just makes sure that:
 # 1. There's an fs-repo, and initializes one if there isn't.
 # 2. The API and Gateway are accessible from outside the container.
