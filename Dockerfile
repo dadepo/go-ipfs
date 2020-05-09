@@ -116,4 +116,4 @@ COPY ./blacklist "/"
 ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/start_ipfs"]
 
 # Execute the daemon subcommand by default
-CMD ["daemon", "--migrate=true"]
+CMD ["ipfs", "daemon", "--migrate=true"]

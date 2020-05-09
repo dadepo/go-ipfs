@@ -80,4 +80,4 @@ ipfs bootstrap add /ip4/192.168.1.1/tcp/4001/ipfs/${PEER_ID}
 # force to start in private network
 #export LIBP2P_FORCE_PNET=1
 
-exec ipfs "$@"
+exec "$@"
